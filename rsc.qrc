@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>luminadeer.jpg</file>
+        <file>bubble.jpg</file>
+    </qresource>
+    <qresource prefix="/icons/icons/toggle/svg/production">
+        <file>ic_check_box_24px.svg</file>
+        <file>ic_check_box_outline_blank_24px.svg</file>
+        <file>ic_indeterminate_check_box_24px.svg</file>
+        <file>ic_radio_button_checked_24px.svg</file>
+        <file>ic_radio_button_unchecked_24px.svg</file>
+        <file>ic_star_24px.svg</file>
+        <file>ic_star_border_24px.svg</file>
+        <file>ic_star_half_24px.svg</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
