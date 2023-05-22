@@ -35,14 +35,17 @@ searchSort::searchSort(QWidget *parent)
     int row = 0;
     while (q->next()) {
         QString username = q->value("username").toString();
-        int completed_stages = q->value("completedStages").toInt();
-        int exp = q->value("exp").toInt();
-        int level = q->value("level").toInt();
+        QStandardItem* completed_stages = new QStandardItem;
+        completed_stages->setData(q->value("completedStages").toInt(),Qt::DisplayRole);
+        QStandardItem* exp = new QStandardItem;
+        exp->setData(q->value("exp").toInt(),Qt::DisplayRole);
+        QStandardItem* level = new QStandardItem;
+        level->setData(q->value("level").toInt(),Qt::DisplayRole);
 
         modelC->setItem(row, 0, new QStandardItem(username));
-        modelC->setItem(row, 1, new QStandardItem(QString::number(completed_stages)));
-        modelC->setItem(row, 2, new QStandardItem(QString::number(level)));
-        modelC->setItem(row, 3, new QStandardItem(QString::number(exp)));
+        modelC->setItem(row, 1, completed_stages);
+        modelC->setItem(row, 2, level);
+        modelC->setItem(row, 3, exp);
         row++;
     }
 
@@ -54,12 +57,14 @@ searchSort::searchSort(QWidget *parent)
     row = 0;
     while (q->next()) {
         QString username = q->value("username").toString();
-        int questions = q->value("questions").toInt();
-        int level = q->value("level").toInt();
+        QStandardItem* questions = new QStandardItem;
+        questions->setData(q->value("questions").toInt(),Qt::DisplayRole);
+        QStandardItem* level = new QStandardItem;
+        level->setData(q->value("level").toInt(),Qt::DisplayRole);
 
         modelQ->setItem(row, 0, new QStandardItem(username));
-        modelQ->setItem(row, 1, new QStandardItem(QString::number(questions)));
-        modelQ->setItem(row, 2, new QStandardItem(QString::number(level)));
+        modelQ->setItem(row, 1, questions);
+        modelQ->setItem(row, 2, level);
         row++;
     }
 
@@ -99,14 +104,17 @@ searchSort::searchSort(QWidget *parent)
                     int row = 0;
                     while (q->next()) {
                         QString username = q->value("username").toString();
-                        int completed_stages = q->value("completedStages").toInt();
-                        int exp = q->value("exp").toInt();
-                        int level = q->value("level").toInt();
+                        QStandardItem* completed_stages = new QStandardItem;
+                        completed_stages->setData(q->value("completedStages").toInt(),Qt::DisplayRole);
+                        QStandardItem* exp = new QStandardItem;
+                        exp->setData(q->value("exp").toInt(),Qt::DisplayRole);
+                        QStandardItem* level = new QStandardItem;
+                        level->setData(q->value("level").toInt(),Qt::DisplayRole);
 
                         modelS->setItem(row, 0, new QStandardItem(username));
-                        modelS->setItem(row, 1, new QStandardItem(QString::number(completed_stages)));
-                        modelS->setItem(row, 2, new QStandardItem(QString::number(level)));
-                        modelS->setItem(row, 3, new QStandardItem(QString::number(exp)));
+                        modelS->setItem(row, 1, completed_stages);
+                        modelS->setItem(row, 2, level);
+                        modelS->setItem(row, 3, exp);
                         row++;
                     }
                 }
@@ -121,12 +129,14 @@ searchSort::searchSort(QWidget *parent)
                     int row = 0;
                     while (q->next()) {
                         QString username = q->value("username").toString();
-                        int questions = q->value("questions").toInt();
-                        int level = q->value("level").toInt();
+                        QStandardItem* questions = new QStandardItem;
+                        questions->setData(q->value("questions").toInt(),Qt::DisplayRole);
+                        QStandardItem* level = new QStandardItem;
+                        level->setData(q->value("level").toInt(),Qt::DisplayRole);
 
                         modelS->setItem(row, 0, new QStandardItem(username));
-                        modelS->setItem(row, 1, new QStandardItem(QString::number(questions)));
-                        modelS->setItem(row, 2, new QStandardItem(QString::number(level)));
+                        modelS->setItem(row, 1, questions);
+                        modelS->setItem(row, 2, level);
                         row++;
                     }
                 }
