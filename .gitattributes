@@ -1,1 +1,3 @@
-libs/ linguist-vendored
+libs/include/*.h linguist-vendored
+libs/include/lib/** linguist-vendored
+libs/include/openssl** linguist-vendored
