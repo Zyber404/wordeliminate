@@ -1,1 +1,3 @@
-libs/**.h linguist-vendored
+libs/*.h linguist-detectable=false
+libs/**/*.h linguist-detectable=false
+libs/**/**/.h linguist-detectable=false
